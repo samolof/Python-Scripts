@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-#Some utility functions to obtain a lock for a process i.e ensure only one runs exclusively
-#registerPid(),unregisterPid() will be called from the parent process
+#  A Utility script with functions to create locks in a safe way for running processes. 
+#  Will ensure only the process that has
+#  obtained the lock with registerPid() is the only one that runs. 
+#  registerPid(),unregisterPid() will be called from the parent process
 
 import os, os.path
 from fcntl import LOCK_UN, LOCK_EX,LOCK_NB, flock 
